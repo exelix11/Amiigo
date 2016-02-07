@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="9c680ce2-25f1-4b7f-8b89-f6686367da87" Publisher="CN=Exelix11" Version="1.0.12.0" />
+  <mp:PhoneIdentity PhoneProductId="9c680ce2-25f1-4b7f-8b89-f6686367da87" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Amiigo</DisplayName>
+    <PublisherDisplayName>Exelix11</PublisherDisplayName>
+    <Logo>Assets/Icons/StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Amiigo.App">
+      <uap:VisualElements DisplayName="Amiigo" Square150x150Logo="Assets\Icons\Square150x150Logo.png" Square44x44Logo="Assets\Icons\Square44x44Logo.png" Description="Dump and restore data in your amiibo(s)" BackgroundColor="#FFFFFF">
+        <uap:DefaultTile ShortName="Amiigo" Wide310x150Logo="Assets\Icons\Wide310x150Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\AmiigoLogo.png" BackgroundColor="#FFFFFF" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="portraitFlipped" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+    <Capability Name="privateNetworkClientServer" />
+    <Capability Name="internetClient" />
+    <uap:Capability Name="removableStorage" />
+    <DeviceCapability Name="proximity" />
+  </Capabilities>
+</Package>
